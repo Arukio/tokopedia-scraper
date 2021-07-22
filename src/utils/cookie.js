@@ -1,7 +1,5 @@
 import fetch from 'node-fetch';
 
-import {GQL_ENDPOINT} from '../constants/constants.js';
-
 let cookie;
 
 function parseCookies(response) {
@@ -14,13 +12,15 @@ function parseCookies(response) {
 }
 
 async function fetchCookie() {
-	const response = await fetch(GQL_ENDPOINT, {
+	const options = {
 		headers: {
 			accept: '*/*',
 			'User-Agent': 'insomnia/2021.4.1',
 			'content-type': 'application/json',
 		},
-	});
+	};
+
+	const response = await fetch('https://gql.tokopedia.com/', options);
 
 	return parseCookies(response);
 }
