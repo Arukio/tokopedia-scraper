@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "xo && ava",
-    "fix": "xo --fix"
+    "fix": "xo --fix",
+    "release": "np"
   },
   "repository": {
     "type": "git",
@@ -39,5 +40,9 @@
     "rules": {
       "unicorn/no-array-method-this-argument": "off"
     }
-  }
+  },
+  "np": {
+		"yarn": true,
+		"contents": "dist"
+	}
 }
