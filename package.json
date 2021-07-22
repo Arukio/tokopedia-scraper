@@ -42,7 +42,6 @@
     }
   },
   "np": {
-		"yarn": true,
-		"contents": "dist"
-	}
+		"yarn": true	
+  }
 }
